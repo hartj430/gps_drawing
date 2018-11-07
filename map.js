@@ -48,7 +48,7 @@ geolocate.on('geolocate', function(event) {
     }
 })
 
-// for testing purposes, also update the variable whenever you click on the map
+
 map.on('click', function(event) {
  current_location = [event.lngLat.lng, event.lngLat.lat]
  console.log('clicked', current_location)     
