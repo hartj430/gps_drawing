@@ -49,18 +49,18 @@ geolocate.on('geolocate', function(event) {
 })
 
 // for testing purposes, also update the variable whenever you click on the map
-//map.on('click', function(event) {
-  // current_location = [event.lngLat.lng, event.lngLat.lat]
-  // console.log('clicked', current_location)     
+map.on('click', function(event) {
+ current_location = [event.lngLat.lng, event.lngLat.lat]
+ console.log('clicked', current_location)     
 
-  //   if (active) {                           // if we're drawing
-   //     path.push(current_location)         // add the current location to the path
-  //     console.log(path)                   // ...and for testing purposes, log the path so far to the console.
- //  map.getSource('drawing').setData(geojson) 
+     if (active) {                           // if we're drawing
+     path.push(current_location)         // add the current location to the path
+       console.log(path)                   // ...and for testing purposes, log the path so far to the console.
+   map.getSource('drawing').setData(geojson) 
 
-  //  }
+    }
 
-// })
+ })
 
 map.on('load', function() {             // 'load' event handler
     map.addLayer({                      // add a layer
